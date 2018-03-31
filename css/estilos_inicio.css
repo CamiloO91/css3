@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+body{
+  background-color: black;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+header{
+  background-color: #5b7989;
+  width: 100%;
+  border-radius: 10px, 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0 ;
+  -moz-border-radius: 10px 10px 0 0 ;
+  animation: rebote 1s;
+}
+header #titulo{
+  color: white;
+  text-shadow: 2px 2px 1px #02010a;
+}
+
+header nav a{
+font-size: 1.2em;
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 33%;
+  color: white;
+
+}
+
+
+.imagen_central{
+  background-color: #82c3a6;
+}
+
+.principal img{
+ border: solid 1px black;
+ box-shadow: 2px 2px 2px #02010a;
+}
+.imagen_secundaria{
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #d5c75f;
+}
+.secundaria img{
+  border: solid 1px;
+  display: block;
+  margin: auto;
+  width: 100%;
+  box-shadow: 2px 2px 2px #02010a;
+}
+.secundaria figcaption{
+  padding-top: 2%;
+}
+.secundaria #cielos:hover{
+  animation: animacionCielos 2s;
+}
+@keyframes animacionCielos {
+  0%{
+    transform: translate(0px);
+  }100%{
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px 2px #82c3a6;
+    border: solid 2px black;
+  }
+}
+@keyframes rebote {
+  0%{
+    margin-top: 150%;
+  }75%{
+    margin-top: -5%;
+  }100%{margin-top: 0%;
+  }
+}
+.secundaria #lagos{
+  transition-property: : transform, box-shadow, border;
+  transition-duration: 1s, 1s, 1s;
+}
+.secundaria #lagos:hover{
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+  border: solid 2px black;
+}
+footer{
+
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  -webkit-border-radius:  0 0 10px, 10px;
+  -moz-border-radius:  0 0 10px 10px;
+}
+.pie{
+  list-style: none;
+  width: 25%;
+}
+.pie img{
+  width: 5%;
+}
+
+@media (min-width: 900px) {
+  #contenedor{
+    width: 900px;
+    display: block;
+    margin: auto;
+  }
+  header{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+}
+header #titulo{
+  width: 75%;
+  margin-left: 2.5%;
+  text-align: left;
+}
+
+header nav{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 0;
+  width: 25%;
+}
+
+.imagen_central{
+  width: 100%;
+}
+
+.imagen_central .principal{
+  display: block;
+  margin: auto;
+  padding: 2.5%;
+  width: 50%;
+}
+.principal img{
+ display: block;
+ margin: auto;
+ width: 80%;
+}
+
+.imagen_secundaria{
+  display:flex;
+  flex-direction: row;
+}
+.secundaria{
+  width: 50%;
+  padding: 2.5%;
+}
+footer{
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+}
+@media (max-width: 900px) {
+  #contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+}
+header #titulo{
+  width: 100%;
+  text-align: center;
+}
+header nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+header nav a{
+  padding: 1%;
+}
+
+.imagen_central .principal{
+  display: block;
+  margin: auto;
+  padding: 2.5%;
+  width: 100%;
+}
+.principal img{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+.imagen_secundaria{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+}
+footer{
+  font-size: 1.4em;
+  width: 100%;
+}
+.pie{
+  width: 100%;
+}
+}

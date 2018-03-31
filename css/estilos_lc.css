@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+body{
+  background-color: black;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+header{
+  background-color: #5b7989;
+  width: 100%;
+  order-radius: 10px, 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0 ;
+  -moz-border-radius: 10px 10px 0 0 ;
+  animation: rebote 1s;
+}
+header #titulo{
+  color: white;
+  text-shadow: 2px 2px 1px #02010a;
+}
+
+header nav a{
+  font-size: 1.2em;
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 33%;
+  color: white;
+
+}
+header nav a:checked{
+text-decoration-line: none;
+}
+#fotos{
+  display: flex;
+  flex-direction: column;
+  background-color: #d5c75f;
+}
+
+#fotos div figure img{
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+#fotos div #imagen1{
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter:blur(10px);
+}
+#fotos #fila1 figure:nth-child(even){
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter:grayscale(100%);
+}
+#fotos #fila2 figure:nth-child(odd){
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter:grayscale(100%);
+}
+#fotos div #imagen3{
+  filter: sepia(90%);
+  -webkit-filter:  sepia(90%);
+  -moz-filter: sepia(90%);
+}
+
+footer{
+
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  -webkit-border-radius:  0 0 10px, 10px;
+  -moz-border-radius:  0 0 10px 10px;
+}
+.pie{
+  list-style: none;
+  width: 25%;
+}
+.pie img{
+  width: 5%;
+}
+@keyframes rebote {
+  0%{
+    margin-top: 150%;
+  }75%{
+    margin-top: -5%;
+  }100%{margin-top: 0%;
+  }
+}
+@media (min-width:900px) {
+#contenedor{
+    width: 900px;
+    display: block;
+    margin: auto;
+  }
+  header{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+}
+header #titulo{
+  width: 75%;
+  margin-left: 2.5%;
+  text-align: left;
+}
+
+header nav{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 0;
+  width: 25%;
+}
+#fila1, #fila2{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#fotos div figure{
+  width: 33.3%;
+}
+footer{
+  font-size: 1em;
+  display: flex;
+  flex-direction: row;
+}
+}
+@media (max-width: 900px) {
+  #contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    clear: both;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+}
+header #titulo{
+  width: 100%;
+  text-align: center;
+}
+header nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+header nav a{
+  padding: 1%;
+}
+#fila1, #fila2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#fotos div figure{
+  width: 80%;
+}
+  footer{
+    font-size: 1.4em;
+    width: 100%;
+  }
+  .pie{
+    width: 100%;
+  }
+}
